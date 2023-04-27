@@ -12,87 +12,91 @@
         android:id="@+id/headingMsgPayload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
-        android:layout_marginRight="120dp"
-        android:text="@string/heading_msg_payload"
-        app:layout_constraintBottom_toTopOf="@+id/textViewMsgPayload"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginRight="108dp"
+        android:text="Nombre de message récupérés :"
         app:layout_constraintEnd_toStartOf="@+id/textViewNumMsgs"
         app:layout_constraintHorizontal_bias="0.793"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.795" />
-
-    <EditText
-        android:id="@+id/editTextMsgPayload"
-        android:layout_width="154dp"
-        android:layout_height="40dp"
-        android:gravity="bottom"
-        android:hint="@string/message_payload"
-        android:imeOptions="actionDone"
-        android:inputType="textUri"
-        app:layout_constraintEnd_toEndOf="@+id/textViewMsgPayload"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMsgPayload" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/headingNumRxMsgs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
         android:text="@string/messages_received"
-        app:layout_constraintBottom_toTopOf="@+id/textViewMsgPayload"
         app:layout_constraintEnd_toStartOf="@+id/textViewNumMsgs"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.991"
         app:layout_constraintStart_toEndOf="@+id/headingMsgPayload"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewNumMsgs"
         android:layout_width="24dp"
         android:layout_height="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewMsgPayload"
-        app:layout_constraintHorizontal_bias="0.894"
+        android:layout_marginTop="108dp"
+        app:layout_constraintHorizontal_bias="0.851"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextMsgPayload"
+        android:layout_width="184dp"
+        android:layout_height="39dp"
+        android:gravity="bottom"
+        android:hint="@string/message_payload"
+        android:imeOptions="actionDone"
+        android:inputType="textUri"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.597" />
 
     <TextView
         android:id="@+id/textViewMsgPayload"
-        android:layout_width="322dp"
-        android:layout_height="345dp"
+        android:layout_width="272dp"
+        android:layout_height="95dp"
         android:gravity="bottom"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <EditText
         android:id="@+id/editTextSubTopic"
-        android:layout_width="154dp"
-        android:layout_height="40dp"
+        android:layout_width="173dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="44dp"
         android:gravity="bottom"
         android:hint="@string/subscribe_to_topic"
         android:imeOptions="actionDone"
         android:inputType="textUri"
-        app:layout_constraintEnd_toStartOf="@+id/editTextPubTopic"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textViewMsgPayload"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextMsgPayload" />
 
     <EditText
         android:id="@+id/editTextPubTopic"
-        android:layout_width="154dp"
-        android:layout_height="40dp"
+        android:layout_width="159dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="44dp"
         android:gravity="bottom"
         android:hint="@string/publish_to_topic"
         android:imeOptions="actionDone"
         android:inputType="textUri"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextSubTopic"
-        app:layout_constraintEnd_toEndOf="@+id/editTextMsgPayload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toEndOf="@+id/editTextSubTopic"
         app:layout_constraintTop_toBottomOf="@+id/editTextMsgPayload" />
 
     <Button
@@ -101,16 +105,45 @@
         android:layout_height="wrap_content"
         android:text="@string/publish"
         android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPubTopic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSub"
         app:layout_constraintTop_toBottomOf="@+id/editTextPubTopic" />
 
     <Button
         android:id="@+id/btnSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
         android:text="@string/subscribe"
         android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/editTextSubTopic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSubTopic" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="402dp"
+        android:layout_height="75dp"
+        android:text="Voici les données que nous pouvons récupérées grâce au broker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.268" />
+
+    <Button
+        android:id="@+id/parametreButton"
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:drawableStart="@drawable/baseline_settings_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.959"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

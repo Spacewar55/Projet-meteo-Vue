@@ -47,8 +47,6 @@ class MqttClientHelper(context: Context?) {
         val mqttConnectOptions = MqttConnectOptions()
         mqttConnectOptions.isAutomaticReconnect = SOLACE_CONNECTION_RECONNECT
         mqttConnectOptions.isCleanSession = SOLACE_CONNECTION_CLEAN_SESSION
-        mqttConnectOptions.userName = SOLACE_CLIENT_USER_NAME
-        mqttConnectOptions.password = SOLACE_CLIENT_PASSWORD.toCharArray()
         mqttConnectOptions.connectionTimeout = SOLACE_CONNECTION_TIMEOUT
         mqttConnectOptions.keepAliveInterval = SOLACE_CONNECTION_KEEP_ALIVE_INTERVAL
         try {

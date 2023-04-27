@@ -1,10 +1,12 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.mqtt.MqttClientHelper
 import com.google.android.material.snackbar.Snackbar
@@ -24,10 +26,18 @@ class MainActivity : AppCompatActivity() {
         MqttClientHelper(this)
     }
 
+    @Override
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+
+        val parametreButton = findViewById<Button>(R.id.parametreButton)
+        parametreButton.setOnClickListener {
+            val intent = Intent(this, ParametreActivity::class.java)
+            startActivity(intent)
+        }
+
+        //setSupportActionBar(toolbar)
         textViewMsgPayload.movementMethod = ScrollingMovementMethod()
 
         setMqttCallBack()
@@ -127,5 +137,4 @@ class MainActivity : AppCompatActivity() {
         mqttClient.destroy()
         super.onDestroy()
     }
-
 }
