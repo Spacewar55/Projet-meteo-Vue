@@ -29,8 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Paramètres"
-                android:layout_marginBottom="40dp"
+                android:text="@string/txtParametre"
+                android:layout_marginBottom="30dp"
                 android:textAlignment="center"
                 android:textColor="@color/lavender"
                 android:textSize="36sp"
@@ -40,7 +40,7 @@
                 android:id="@+id/labelBroker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Broker :"
+                android:text="@string/broker"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -53,7 +53,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="Broker"
+                android:hint="@string/broker"
                 android:inputType="text"
                 android:padding="8dp"
                 android:textColor="@color/black" />
@@ -62,7 +62,7 @@
                 android:id="@+id/labelApi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="API :"
+                android:text="@string/api"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -75,7 +75,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="API"
+                android:hint="@string/api"
                 android:inputType="text"
                 android:padding="8dp"
                 android:textColor="@color/black" />
@@ -84,7 +84,7 @@
                 android:id="@+id/rangeMin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Range Min :"
+                android:text="@string/minRange"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -96,7 +96,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="Minimum"
+                android:hint="@string/minRange"
                 android:inputType="number"
                 android:padding="8dp"
                 android:textColor="@color/black" />
@@ -105,7 +105,7 @@
                 android:id="@+id/rangeMax"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Range Max :"
+                android:text="@string/maxRange"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -116,10 +116,22 @@
                 android:layout_height="50dp"
                 android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="Maximum"
+                android:hint="@string/maxRange"
                 android:inputType="number"
                 android:padding="8dp"
                 android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/settingsSave"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/lavender"
+                android:text="@string/btnParametre"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cornerRadius="20dp">
+            </Button>
 
         </LinearLayout>
 

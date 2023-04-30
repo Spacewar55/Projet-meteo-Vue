@@ -1,3 +1,10 @@
+/**
+Page de connexion à l'application
+@author Alex De Souza
+@version 1.0 20/02/23
+        2.0 30/04/23
+ */
+
 package com.example.myapplication
 
 import android.os.Bundle
@@ -17,14 +24,15 @@ class LoginActivity : AppCompatActivity() {
         val username = findViewById<EditText>(R.id.username)
         val password = findViewById<EditText>(R.id.password)
 
+        //Vérification du login et du mot de passe pour la connexion a l'application
         loginButton.setOnClickListener {
-            if (username.text.toString() == "Alex" && password.text.toString() == "1234"){
+            if (username.text.toString() == "alexds2000@outlook.fr" && password.text.toString() == "1234"){
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                Toast.makeText(this, "Connection réussie!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Connexion réussie!", Toast.LENGTH_SHORT).show()
             }
             else {
-                Toast.makeText(this, "Connection échouée!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Connexion échouée!", Toast.LENGTH_SHORT).show()
             }
         }
 

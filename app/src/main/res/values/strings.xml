@@ -1,11 +1,25 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="action_settings">Settings</string>
+    //page de connexion
+    <string name="username">Utilisateur</string>
+    <string name="login">Mot de passe</string>
+    <string name="txtLogin">Page de connexion</string>
+    <string name="btnLogin">Connexion</string>
+    //page principale
+    <string name="app_name">Station météo</string>
+    <string name="action_settings">Paramètre</string>
     <string name="messages_received">Rx:</string>
-    <string name="publish_to_topic">Publish to topic</string>
-    <string name="publish">Publish</string>
-    <string name="subscribe">Subscribe</string>
-    <string name="subscribe_to_topic">Subscribe to topic</string>
-    <string name="message_payload">Message payload</string>
-    <string name="heading_msg_payload"><u>Received Message payloads</u></string>
+    <string name="publish_to_topic">Envoyer au topic</string>
+    <string name="publish">Publier</string>
+    <string name="subscribe">Recevoir</string>
+    <string name="subscribe_to_topic">Recevoir du topic</string>
+    <string name="message_payload">Message reçu</string>
+    <string name="topicHumidite">zigbee2mqtt/0x00124b00251323c1/humidity</string>
+    <string name="messageInfo">Voici les données que nous pouvons récupérées grâce au broker</string>
+    //page parametre
+    <string name="broker">Broker</string>
+    <string name="api">API</string>
+    <string name="minRange">Valeur minimale</string>
+    <string name="maxRange">Valeur maximale</string>
+    <string name="txtParametre">Page de paramètres</string>
+    <string name="btnParametre">Enregistrer</string>
 </resources>

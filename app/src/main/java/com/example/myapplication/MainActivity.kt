@@ -1,3 +1,9 @@
+/**
+Page principale de l'application
+@author Alex De Souza
+@version 1.0 20/02/23
+        2.0 30/04/23
+ */
 package com.example.myapplication
 
 import android.content.Intent
@@ -31,7 +37,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val parametreButton = findViewById<Button>(R.id.parametreButton)
+        //Ouvre la vue paramètre
+        val parametreButton = findViewById<Button>(R.id.settingsButton)
         parametreButton.setOnClickListener {
             val intent = Intent(this, ParametreActivity::class.java)
             startActivity(intent)
@@ -45,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         // initialize 'num msgs received' field in the view
         textViewNumMsgs.text = "0"
 
-        // pub button
+        // publisher button
         btnPub.setOnClickListener { view ->
             var snackbarMsg : String
             val topic = editTextPubTopic.text.toString().trim()
@@ -63,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        // sub button
+        // subcriber button
         btnSub.setOnClickListener { view ->
             var snackbarMsg : String
             val topic = editTextSubTopic.text.toString().trim()
